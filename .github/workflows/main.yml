@@ -33,6 +33,8 @@ jobs:
       run: |
         export VITE_BASE_DIR="/$(basename $GITHUB_REPOSITORY)/"
         echo "VITE_BASE_DIR: $VITE_BASE_DIR"
+        chmod +x run.sh
+        chmod +x get-reposense.py
         ./run.sh
 
     - name: Deploy GitHub pages
