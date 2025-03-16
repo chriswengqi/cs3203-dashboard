@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 # For scheduled deployment with Cron Jobs.
 ## Examples of cron schedule expressions:
 ### '0 * * * *': hourly
