@@ -1,6 +1,6 @@
-Mar 11, 2025 3:32:03 AM reposense.system.LogsManager addFileHandler
+Mar 16, 2025 7:49:50 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Mar 11, 2025 3:32:03 AM reposense.git.GitConfig getGlobalGitLfsConfig
+Mar 16, 2025 7:49:50 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -16,31 +16,15 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Mar 11, 2025 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/nus-cs3203/iamdb-fe.git...
-Mar 11, 2025 3:32:03 AM reposense.report.RepoCloner spawnCloneProcess
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/nus-cs3203/cs3203-2420-cs3203_02.git...
-Mar 11, 2025 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/nus-cs3203/cs3203-2420-cs3203_02.git to complete...
-Mar 11, 2025 3:32:03 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/nus-cs3203/iamdb-fe.git to complete...
-Mar 11, 2025 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "nus-cs3203/cs3203-2420-cs3203_02[HEAD]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/nus-cs3203/cs3203-2420-cs3203_02.git' 'repos/nus-cs3203_cs3203-2420-cs3203_02/cs3203-2420-cs3203_02_bare' on path . :
-Cloning into bare repository 'repos/nus-cs3203_cs3203-2420-cs3203_02/cs3203-2420-cs3203_02_bare'...
-fatal: could not read Username for 'https://github.com': No such device or address
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:270)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:213)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Mar 11, 2025 3:32:04 AM reposense.report.RepoCloner waitForCloneProcess
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/nus-cs3203/cs3203-2420-cs3203_02.git to complete...
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "nus-cs3203/iamdb-fe[HEAD]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/nus-cs3203/iamdb-fe.git' 'repos/nus-cs3203_iamdb-fe/iamdb-fe_bare' on path . :
 Cloning into bare repository 'repos/nus-cs3203_iamdb-fe/iamdb-fe_bare'...
@@ -56,7 +40,23 @@ fatal: could not read Username for 'https://github.com': No such device or addre
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Mar 11, 2025 3:32:04 AM reposense.report.ReportGenerator generateReposReport
+Mar 16, 2025 7:49:50 AM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "nus-cs3203/cs3203-2420-cs3203_02[HEAD]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'https://github.com/nus-cs3203/cs3203-2420-cs3203_02.git' 'repos/nus-cs3203_cs3203-2420-cs3203_02/cs3203-2420-cs3203_02_bare' on path . :
+Cloning into bare repository 'repos/nus-cs3203_cs3203-2420-cs3203_02/cs3203-2420-cs3203_02_bare'...
+fatal: could not read Username for 'https://github.com': No such device or address
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:270)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:213)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Mar 16, 2025 7:49:50 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/cs3203-dashboard/cs3203-dashboard/reposense-report
-Mar 11, 2025 3:32:04 AM reposense.RepoSense main
-INFO: Elapsed processing time: 0.37 second(s)
+Mar 16, 2025 7:49:50 AM reposense.RepoSense main
+INFO: Elapsed processing time: 0.33 second(s)
